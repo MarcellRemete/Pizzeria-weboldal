@@ -1,2 +1,2 @@
-# Pizz-ria-weboldal
+# Pizzeria-weboldal
 ...
