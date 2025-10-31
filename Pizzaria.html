@@ -14,6 +14,8 @@
         padding: 0;
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        top: 0px;
         }
 
         ul li {
@@ -83,6 +85,56 @@
             text-decoration: underline;
         }
 
+        .kosar_gomb{
+            background-color: wheat;
+            color: black;
+        }
+
+        .kosar_gomb:hover{
+            background-color: brown;
+            font-style: oblique;
+        }
+
+        #specialOffer{
+            border-style: solid;
+             background-color: #492222;
+             margin-bottom: 0px;
+             margin-top: 45px;
+        }
+
+        #kul_aj{
+            font-weight: bold;
+            background-size: cover;
+            background-image: url("pizza.jpg");
+            /* background-repeat: no-repeat; */
+            text-align: right;
+            font-size: 60px;
+            color: wheat;
+            border-style: solid;
+            border-color: #000000;
+            margin: 0px auto;
+            width: 800px;
+            height: 600px;
+            position: relative;
+            
+        }
+
+        #kul_aj:hover{
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        #kul_aj_szov{
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+        }
+
+        
+
+        
+
+
+
     </style>
 </head>
 <body>
@@ -92,6 +144,7 @@
             <li><a href="#home">Főoldal</a></li>
             <li><a href="#about">Rólunk</a></li>
             <li><a href="#menu">Menü</a></li>
+            <li><a href="#specialOffer">Különleges ajánlat</a></li>
             <li><a href="#pizzaCreator">Egyéni pizza</a></li>
             <li><a href="#location">Elhelyezkedés</a></li>
             
@@ -143,8 +196,21 @@
             
         
 
-        
+        <h2 id="specialOffer">
+            Különleges ajánlat
+        </h2>
 
+        <div id="kul_aj">
+            <div id="kul_aj_szov">
+            <p>Különleges ajánlat</p>
+            <p>Név</p>
+            <p>Leírás, blah blah blah</p>
+            <p>2000FT</p>
+            <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+            
+        
 
 </body>
 </html>
