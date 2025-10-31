@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <style>
+        body {
+            background-color: rgba(221, 181, 138, 1);
+        }
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        ul li {
+        float: left;
+        }
+
+        ul li a {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        }
+        #mainSection{
+            background-image: url(./pizza.jpg);
+            height: 700px;
+            image-rendering: crisp-edges;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #mainSection h1{
+            color: rgb(255, 255, 255);
+            font-size: 100px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #menu{
+            border-style: solid;
+             background-color: #492222;
+             /* margin-top: 0px; */
+             margin-bottom: 0px;
+        }
+
+        .ajanlatok{
+            border-style: solid;
+            display: flex;
+        }
+
+        
+
+        .pizza_kep{
+            height: 250px;
+            width: 250px;
+            margin: 50px;
+        }
+
+        .szovegek{
+            margin-top: 50px;
+            margin-left: 55px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .pizza_nev{
+            text-decoration: underline wavy;
+        }
+
+        .pizza_ar{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mainSection">
+        <div id="menuBar">
+            <ul>
+            <li><a href="#home">Főoldal</a></li>
+            <li><a href="#about">Rólunk</a></li>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#pizzaCreator">Egyéni pizza</a></li>
+            <li><a href="#location">Elhelyezkedés</a></li>
+            
+            </ul>
+        </div>
+
+        <h1>
+            Pizzéria neve
+        </h1>
+    </div>
+
+
+
+    
+
+        <h2 id="menu">
+            Menü
+        </h2>
+
+        
+        <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">1999FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+
+
+        <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">2199FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+
+
+        <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">1885FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+            
+        
+
+        
+
+
+</body>
+</html>
