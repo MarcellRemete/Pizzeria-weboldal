@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzéria neve</title>
+
+    <style>
+    body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto max-content max-content;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0%;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        text-align: center;
+        color: #f2f2f2;
+        padding: 15px 20px ;
+        text-decoration: none;
+        font-size: 17px;
+        font-size: large;
+    }
+
+    .navbar img {
+    height: 30px;
+    margin: auto;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+
+    .fokep{
+        background-image: url(./pizzahatter.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1000px;
+        top: none;
+        margin: none;
+        padding-top: none;
+    }
+    .fokep h1{
+        padding: auto;
+        text-align: center;
+        margin: auto;
+        font-size: 100px;
+        font-weight: 350;
+        color: white;
+        line-height: 30rem;
+    }
+
+    .fokep h2{
+        padding: auto;
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+        font-weight: 200;
+        color: rgb(255, 255, 255);
+    }
+
+    .rolunk{
+        display: grid;
+        grid-template-areas:
+        "leiras alapito"
+        "leiras pizzaria";        
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+        box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+        padding: 60px;
+        margin: 30px;
+        background-image: url(./papir.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .leiras{ 
+        grid-area: leiras;
+        padding: none;
+    }
+    .leiras h2{
+        font-size: 100px;
+        padding: none;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        margin: none;
+    }
+    .leiras h3{
+        font-size: 40px;
+        padding: none;
+        color: rgb(0, 0, 0);
+        font-weight: 300;
+        margin: none;
+    }
+    .pizzaria{
+        grid-area: pizzaria;
+        width: 100px;
+    }
+    .alapito{
+        grid-area: alapito;
+        width: 100px;
+    }
+    .rolunk img{
+        width: 30rem;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+
+    
+
+    .ajanlatok{
+            border-style: solid;
+            display: flex;
+            background-color: aquamarine;
+            margin-top: 5px;
+        }
+
+        .pizza_kep{
+            height: 250px;
+            width: 250px;
+            margin: 50px;
+        }
+
+        .ajanlat_szovegek{
+            margin-top: 50px;
+            margin-left: 55px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .pizza_nev{
+            text-decoration: underline wavy;
+        }
+
+        .pizza_ar{
+            text-decoration: underline;
+        }
+
+        .kosar_gomb{
+            background-color: wheat;
+            color: black;
+        }
+
+        .kosar_gomb:hover{
+            background-color: brown;
+            font-style: oblique;
+        }
+
+
+
+</style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#home">Főoldal</a>
+        <a href="#leiras">Rólunk</a>
+        <a href="#offer">Ajánlatunk</a>
+        <a href="#services">Szolgáltatások</a>
+        <a href="#contact">Kapcsolat</a>
+        <a href="#cart" class="kosar">Bejelentkezés</a>
+        <a href="#profile" class="profil">Kosár</a>
+    </div>
+
+    <div class="fokep" id="home">
+        <h1>1987 Pizza</h1>
+        <h2>Klasszikus ízek egy klasszikus helyen.</h2>
+        <h2>Nyitvatartás 11:00 - 22:00</h2>
+    </div>
+
+    <div class="rolunk">
+        <div class="leiras">
+            <p id="leiras"></p>
+            <h2>
+                Rólunk
+            </h2>
+            <h3>
+                Alapítás
+            </h3>
+            <p>
+                Az 1987 Pizza Pizzéria 1987 októberében jött létre Kovács Benedek alapító kezdeményezésére. Benedek az olaszországi szakmai tanulmányútjai során megismerte a hagyományos nápolyi pizzakészítés technológiáját, amely meghatározó inspirációként szolgált a vállalkozás későbbi koncepciójához.
+                Célja egy olyan vendéglátóhely megnyitása volt, amely Magyarországon is elérhetővé teszi az autentikus olasz pizzakultúrát, egyben modern, városi környezetbe helyezve azt.
+            </p>
+            <h3>
+                Koncepciónk
+            </h3>
+            <p>
+                A kezdetektől fogva vállalatunk működését három alapelv határozza meg:
+
+                Kézműves minőség – A pizzatészta minden nap frissen, kézzel készül hagyományos eljárással.
+
+                Minőségi alapanyagok – Olasz beszállítóktól érkező alapanyagokkal és helyi termelőktől származó friss árukkal dolgozunk.
+
+                Vendégközpontú szemlélet – Éttermeink kialakításában és kiszolgálási folyamatainkban a barátságos, közvetlen hangulatot helyezzük előtérbe.
+
+            </p>
+
+            <h3>
+                Az első pizzéria megnyitása
+            </h3>
+            <p>
+            
+
+                A legelső 1987 Pizza Pizzéria egy kis, családias hangulatú egységként indult a város központjában. A helyiségben felállított, kézzel épített fatüzelésű kemence ma is különleges szerepet tölt be vállalkozásunk történetében.
+                Megnyitásunk első hétvégéjén vendégkörünk a vártnál jóval nagyobb volt, amely megerősítette hitünket abban, hogy az autentikus olasz ízekre jelentős igény mutatkozik.
+            </p>
+            <h3>
+                Fejlődés és terjeszkedés
+            </h3>
+            <p>
+                1994-ben megnyitottuk második éttermünket, amely a korábbi tapasztalatokra építve már megnövelt kapacitással és bővített kínálattal működött.
+                A 2000-es évekre vállalkozásunk több városban is jelen volt, miközben az eredeti hagyományok és receptek változatlanul megmaradtak.
+            </p>
+            <h3>
+                Mai működésünk
+            </h3>
+            <p>
+                Az 1987 Pizza Pizzéria napjainkban is ragaszkodik a hagyományos pizzakészítés értékeihez, ugyanakkor folyamatosan fejlesztjük technológiáinkat és szolgáltatásainkat.
+                Éttermeket úgy alakítjuk ki, hogy azok kellemes, otthonos légkört biztosítsanak, miközben vendégeink számára a ’80-as évek hangulatát idéző, márkánkra jellemző vizuális elemek is jelen vannak.
+            </p>
+            <h3>
+                Küldetésünk
+            </h3>
+            <p>
+                Küldetésünk, hogy minden vendégünk számára elérhetővé tegyük azt az élményt, amelyből pizzériánk született: a minőségi alapokon nyugvó, örömteli étkezést és a valódi olasz pizzakultúra élményét.
+                Ha szeretnéd, elkészíthetem ugyanezt rövidebb weboldalra szánt verzióban, vagy akár egy marketinges hangvételű, látványosabb bemutatkozó oldalként is.
+            </p>
+        </div>
+        <div class="pizzaria">
+            <img src="./1987pizza.png" alt="">
+        </div>
+        <div class="alapito">
+            <img src="./alapito.png" alt="">
+        </div>
+    </div>
+
+
+
+
+    <div id="ajanlat_lista">
+        <h2  id="offer">
+            Ajánlatunk
+        </h2>
+       <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="ajanlat_szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">1999FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+
+
+        <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="ajanlat_szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">2199FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+
+
+        <div class="ajanlatok">
+            <img class=pizza_kep src="pizza.jpg" alt="pizza">
+            <div class="ajanlat_szovegek">
+                <p class="pizza_nev">Név</p>
+                <p class="pizza_ar">1885FT</p>
+                <button class="kosar_gomb">Kosárba</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 id="services">Szolgáltatások</h2>
+    </div>
+
+    <div>
+        <h2 id="contact">Kapcsolat</h2>
+    </div>
+
+
+
+    <script src=""></script>
+</body>
+</html>
