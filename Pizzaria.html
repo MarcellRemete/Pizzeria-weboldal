@@ -3,74 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria</title>
+    <title>Pizzéria neve</title>
+
     <style>
-        body {
-            background-color: rgba(221, 181, 138, 1);
-        }
-        ul {
-        list-style-type: none;
-        padding: 0px;
+    body {
         margin: 0;
-        display: flex;
-        justify-content: space-evenly;
+        font-family: system-ui, sans-serif;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto max-content max-content;
+        background-color: rgba(0, 0, 0, 0.8);
         overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        top: 0px;
         position: fixed;
-        }
+        width: 100%;
+        top: 0%;
+        overflow: hidden;
+    }
 
-
-
-        ul li a {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        display: block;
-        color: white;
-        /* text-align: center; */
-        padding: 14px 16px;
+    .navbar a {
+        text-align: center;
+        color: #f2f2f2;
+        padding: 15px 20px ;
         text-decoration: none;
-        }
+        font-size: 17px;
+        font-size: large;
+    }
 
-        ul li a:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        #mainSection{
-            background-image: url(./pizza.jpg);
-            height: 700px;
-            image-rendering: crisp-edges;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #mainSection h1{
-            color: rgb(255, 255, 255);
-            font-size: 100px;
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-shadow: 2px 2px 4px #000000;
-        }
+    .navbar img {
+    height: 30px;
+    margin: auto;
+    }
 
-        h2{
-            border-style: solid;
-             background-color: #492222;
-             margin-bottom: 5px;
-        }
-        
+    .navbar a:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
 
-        .ajanlatok{
+    .fokep{
+        background-image: url(./pizzahatter.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1000px;
+        top: none;
+        margin: none;
+        padding-top: none;
+    }
+    .fokep h1{
+        padding: auto;
+        text-align: center;
+        margin: auto;
+        font-size: 100px;
+        font-weight: 350;
+        color: white;
+        line-height: 30rem;
+    }
+
+    .fokep h2{
+        padding: auto;
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+        font-weight: 200;
+        color: rgb(255, 255, 255);
+    }
+
+    .rolunk{
+        display: grid;
+        grid-template-areas:
+        "leiras alapito"
+        "leiras pizzaria";        
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+        box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+        padding: 60px;
+        margin: 30px;
+        background-image: url(./papir.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .leiras{ 
+        grid-area: leiras;
+        padding: none;
+    }
+    .leiras h2{
+        font-size: 100px;
+        padding: none;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        margin: none;
+    }
+    .leiras h3{
+        font-size: 40px;
+        padding: none;
+        color: rgb(0, 0, 0);
+        font-weight: 300;
+        margin: none;
+    }
+    .pizzaria{
+        grid-area: pizzaria;
+        width: 100px;
+    }
+    .alapito{
+        grid-area: alapito;
+        width: 100px;
+    }
+    .rolunk img{
+        width: 30rem;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+
+    
+
+    .ajanlatok{
             border-style: solid;
             display: flex;
+            background-color: aquamarine;
+            margin-top: 5px;
         }
 
-        
         .pizza_kep{
             height: 250px;
             width: 250px;
             margin: 50px;
         }
 
-        .szovegek{
+        .ajanlat_szovegek{
             margin-top: 50px;
             margin-left: 55px;
             font-size: 30px;
@@ -97,68 +158,104 @@
         }
 
 
-        #kul_aj{
-            font-weight: bold;
-            background-size: cover;
-            background-image: url("pizza.jpg");
-            /* background-repeat: no-repeat; */
-            text-align: right;
-            font-size: 60px;
-            color: wheat;
-            border-style: solid;
-            border-color: #000000;
-            margin: 0px auto;
-            width: 800px;
-            height: 600px;
-            position: relative;
-            
-        }
 
-        #kul_aj:hover{
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        #kul_aj_szov{
-            position: absolute;
-            bottom: 15px;
-            right: 10px;
-        }
-    </style>
+</style>
 </head>
-<body>
-    <div id="mainSection">
-        <div id="menuBar">
-            <ul>
-            <li><a href="#home">Főoldal</a></li>
-            <li><a href="#about">Rólunk</a></li>
-            <li><a href="#menu">Menü</a></li>
-            <li><a href="#specialOffer">Különleges ajánlat</a></li>
-            <li><a href="#pizzaCreator">Egyéni pizza</a></li>
-            <li><a href="#location">Elhelyezkedés</a></li>
-            
-            </ul>
-        </div>
 
-        <h1 id="home">
-            Pizzéria neve
-        </h1>
+<body>
+
+    <div class="navbar">
+        <a href="#home">Főoldal</a>
+        <a href="#leiras">Rólunk</a>
+        <a href="#offer">Ajánlatunk</a>
+        <a href="#services">Szolgáltatások</a>
+        <a href="#contact">Kapcsolat</a>
+        <a href="#cart" class="kosar">Bejelentkezés</a>
+        <a href="#profile" class="profil">Kosár</a>
+    </div>
+
+    <div class="fokep" id="home">
+        <h1>1987 Pizza</h1>
+        <h2>Klasszikus ízek egy klasszikus helyen.</h2>
+        <h2>Nyitvatartás 11:00 - 22:00</h2>
+    </div>
+
+    <div class="rolunk">
+        <div class="leiras">
+            <p id="leiras"></p>
+            <h2>
+                Rólunk
+            </h2>
+            <h3>
+                Alapítás
+            </h3>
+            <p>
+                Az 1987 Pizza Pizzéria 1987 októberében jött létre Kovács Benedek alapító kezdeményezésére. Benedek az olaszországi szakmai tanulmányútjai során megismerte a hagyományos nápolyi pizzakészítés technológiáját, amely meghatározó inspirációként szolgált a vállalkozás későbbi koncepciójához.
+                Célja egy olyan vendéglátóhely megnyitása volt, amely Magyarországon is elérhetővé teszi az autentikus olasz pizzakultúrát, egyben modern, városi környezetbe helyezve azt.
+            </p>
+            <h3>
+                Koncepciónk
+            </h3>
+            <p>
+                A kezdetektől fogva vállalatunk működését három alapelv határozza meg:
+
+                Kézműves minőség – A pizzatészta minden nap frissen, kézzel készül hagyományos eljárással.
+
+                Minőségi alapanyagok – Olasz beszállítóktól érkező alapanyagokkal és helyi termelőktől származó friss árukkal dolgozunk.
+
+                Vendégközpontú szemlélet – Éttermeink kialakításában és kiszolgálási folyamatainkban a barátságos, közvetlen hangulatot helyezzük előtérbe.
+
+            </p>
+
+            <h3>
+                Az első pizzéria megnyitása
+            </h3>
+            <p>
+            
+
+                A legelső 1987 Pizza Pizzéria egy kis, családias hangulatú egységként indult a város központjában. A helyiségben felállított, kézzel épített fatüzelésű kemence ma is különleges szerepet tölt be vállalkozásunk történetében.
+                Megnyitásunk első hétvégéjén vendégkörünk a vártnál jóval nagyobb volt, amely megerősítette hitünket abban, hogy az autentikus olasz ízekre jelentős igény mutatkozik.
+            </p>
+            <h3>
+                Fejlődés és terjeszkedés
+            </h3>
+            <p>
+                1994-ben megnyitottuk második éttermünket, amely a korábbi tapasztalatokra építve már megnövelt kapacitással és bővített kínálattal működött.
+                A 2000-es évekre vállalkozásunk több városban is jelen volt, miközben az eredeti hagyományok és receptek változatlanul megmaradtak.
+            </p>
+            <h3>
+                Mai működésünk
+            </h3>
+            <p>
+                Az 1987 Pizza Pizzéria napjainkban is ragaszkodik a hagyományos pizzakészítés értékeihez, ugyanakkor folyamatosan fejlesztjük technológiáinkat és szolgáltatásainkat.
+                Éttermeket úgy alakítjuk ki, hogy azok kellemes, otthonos légkört biztosítsanak, miközben vendégeink számára a ’80-as évek hangulatát idéző, márkánkra jellemző vizuális elemek is jelen vannak.
+            </p>
+            <h3>
+                Küldetésünk
+            </h3>
+            <p>
+                Küldetésünk, hogy minden vendégünk számára elérhetővé tegyük azt az élményt, amelyből pizzériánk született: a minőségi alapokon nyugvó, örömteli étkezést és a valódi olasz pizzakultúra élményét.
+                Ha szeretnéd, elkészíthetem ugyanezt rövidebb weboldalra szánt verzióban, vagy akár egy marketinges hangvételű, látványosabb bemutatkozó oldalként is.
+            </p>
+        </div>
+        <div class="pizzaria">
+            <img src="./1987pizza.png" alt="">
+        </div>
+        <div class="alapito">
+            <img src="./alapito.png" alt="">
+        </div>
     </div>
 
 
 
-    
-        <h2 id="about">
-            Rólunk
-        </h2>
-    
 
-        <h2 id="menu">
-            Menü
+    <div id="ajanlat_lista">
+        <h2  id="offer">
+            Ajánlatunk
         </h2>
-        
-        <div class="ajanlatok">
+       <div class="ajanlatok">
             <img class=pizza_kep src="pizza.jpg" alt="pizza">
-            <div class="szovegek">
+            <div class="ajanlat_szovegek">
                 <p class="pizza_nev">Név</p>
                 <p class="pizza_ar">1999FT</p>
                 <button class="kosar_gomb">Kosárba</button>
@@ -168,7 +265,7 @@
 
         <div class="ajanlatok">
             <img class=pizza_kep src="pizza.jpg" alt="pizza">
-            <div class="szovegek">
+            <div class="ajanlat_szovegek">
                 <p class="pizza_nev">Név</p>
                 <p class="pizza_ar">2199FT</p>
                 <button class="kosar_gomb">Kosárba</button>
@@ -178,57 +275,24 @@
 
         <div class="ajanlatok">
             <img class=pizza_kep src="pizza.jpg" alt="pizza">
-            <div class="szovegek">
+            <div class="ajanlat_szovegek">
                 <p class="pizza_nev">Név</p>
                 <p class="pizza_ar">1885FT</p>
                 <button class="kosar_gomb">Kosárba</button>
             </div>
         </div>
-            
-        
+    </div>
 
-        <h2 id="specialOffer">
-            Különleges ajánlat
-        </h2>
+    <div>
+        <h2 id="services">Szolgáltatások</h2>
+    </div>
 
-        <div id="kul_aj">
-            <div id="kul_aj_szov">
-            <p>Különleges ajánlat</p>
-            <p>Név</p>
-            <p>Leírás, blah blah blah</p>
-            <p>2000FT</p>
-            <button class="kosar_gomb">Kosárba</button>
-            </div>
-        </div>
-
-
-        <h2 id="pizzaCreator">
-            Egyéni pizza
-        </h2>
-        <p>Késítsd el a saját álom pizzádat!</p>
+    <div>
+        <h2 id="contact">Kapcsolat</h2>
+    </div>
 
 
 
-
-        
-
-        <h2 id="location">
-            Elhelyezkedés
-        </h2>
-
-        <div>
-            <img class=Hely src="" alt="Elhelyezkedés">
-            <p>A térképet követve megtalálhatja helyi éttermünket.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Dolor adipisci facilis molestias ducimus repudiandae doloremque amet unde quam voluptas? Corrupti mollitia facilis ipsa quam! Fuga aperiam accusantium iste rem quia.</p>
-        </div>
-            
-        
-
-        
-        <script src=""></script>
-            
-        
-
+    <script src=""></script>
 </body>
 </html>
