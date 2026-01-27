@@ -1,0 +1,69 @@
+CREATE TABLE Felhasznalok(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Felhasznalonev VARCHAR(35) NOT NULL,
+    Jelszo VARCHAR(255)
+    );
+
+CREATE TABLE Kupon(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Kod VARCHAR(12) NOT NULL UNIQUE,
+    Felhasznalo_id INT NOT NULL,
+    FOREIGN KEY (Felhasznalo_id) REFERENCES Felhasznalok(Id)
+    );
+
+
+CREATE TABLE `rendelesek` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nev` varchar(35) NOT NULL,
+  `Lakcim` varchar(50) NOT NULL,
+  `Datum` datetime NOT NULL,
+  `Osszeg` decimal(10,2) NOT NULL,
+  `Egyedi` tinyint(1) NOT NULL,
+  `Felhasz_id` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `Felhasz_id` (`Felhasz_id`),
+  CONSTRAINT `rendelesek_ibfk_1` FOREIGN KEY (`Felhasz_id`) REFERENCES `felhasznalok` (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+Használat:
+0 = hamis
+1 = igaz
+
+
+
+CREATE TABLE Menu(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Pizzanev VARCHAR(40) NOT NULL,
+    Ar DECIMAL(10,2) NOT NULL,
+    Rendel_id INT NOT NULL,
+    FOREIGN KEY (Rendel_id) REFERENCES Rendelesek(Id)
+    );
+
+
+CREATE TABLE Pizza_tervezo(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Feltet VARCHAR(255) NOT NULL,
+    Rendeles_id INT,
+    FOREIGN KEY (Rendeles_id) REFERENCES Rendelesek(Id)
+    );
+
+
+
+INSERT INTO `felhasznalok` (`Id`, `Felhasznalonev`, `Jelszo`) VALUES (NULL, 'Susie', 'Iwasthe1'), (NULL, 'Jeremy', 'Faceless2'), (NULL, 'Gabriel', 'HarHarHar3'), (NULL, 'Fritz', 'Pirrate4'), (NULL, 'Cassidy', 'KEEPUHERE5'), (NULL, 'Charlotte Emily', 'Carryemall6'), (NULL, 'Gregory', 'Superstar7'), (NULL, 'Cassie', 'Roxyfan8');
+
+
+
+INSERT INTO `kupon` (`Id`, `Kod`, `Felhasznalo_id`) VALUES (NULL, 'URD0GH3R3', '1'), (NULL, 'COMETOUS', '2'), (NULL, 'H0TDEALS', '5'), (NULL, 'ALLNIGHT', '7'), (NULL, '0UTTH3R3', '6'), (NULL, 'TH3RUINS', '8');
+
+
+INSERT INTO `rendelesek` (`Id`, `Nev`, `Lakcim`, `Datum`, `Osszeg`, `Egyedi`, `Felhasz_id`) VALUES (NULL, 'Susie', 'Istálló utca 1', '1985-06-25 17:52:07.000000', '1399', '0', '1'), (NULL, 'Jeremy', 'Szilva utca 27', '1985-06-25 18:10:07.000000', '1450', '0', '2'), (NULL, 'Charlotte Emily', 'Hurrikán utca 1', '1983-10-26 16:12:08.000000', '999', '1', '6'), (NULL, 'Gregory', 'Cső utca 100', '2026-01-25 23:12:07.000000', '3450', '1', '7');
+
+INSERT INTO `menu` (`Id`, `Pizzanev`, `Ar`, `Rendel_id`) VALUES (NULL, 'Prosciutto e Funghi', '1450', '2'), (NULL, 'Diavola', '1399', '1');
+
+INSERT INTO `pizza_tervezo` (`Id`, `Feltet`, `Rendeles_id`) VALUES (NULL, 'mozzarella', '3'), (NULL, 'mozzarella, cheddar, sonka, szalámi, szalonna gomba, tonhal, ananász, kukorica', '4');
+
+INSERT INTO `rendelesek` (`Id`, `Nev`, `Lakcim`, `Datum`, `Osszeg`, `Egyedi`, `Felhasz_id`) VALUES (NULL, 'Gabriel', 'Erdő utca 5', '1985-06-25 19:31:42.000000', '1399', '0', '3'), (NULL, 'Fritz', 'Szilva utca 99', '1985-06-25 20:32:52.000000', '1600', '0', '4'), (NULL, 'Cassidy', 'Erdő utca 66', '1985-06-25 21:31:42.000000', '2000', '0', '5'), (NULL, 'Cassie', 'Eper utca 46', '2026-01-27 21:31:42.000000', '2100', '0', '8');
+
+INSERT INTO `menu` (`Id`, `Pizzanev`, `Ar`, `Rendel_id`) VALUES (NULL, 'Napoletana', '1399', '5'), (NULL, 'Marinara', '1600', '6'), (NULL, 'Quattro Stagioni', '2000', '7'), (NULL, 'Capricciosa', '2100', '8');
+
+
